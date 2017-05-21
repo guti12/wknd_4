@@ -24,23 +24,7 @@ class SimpleCalculator
 
 end
 
-class FancyCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
+class FancyCalculator < SimpleCalculator
 
   def square_root(number)
     Math.sqrt(number)
@@ -48,27 +32,7 @@ class FancyCalculator
 
 end
 
-class WhizBangCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
-
-  def square_root(number)
-    Math.sqrt(number)
-  end
+class WhizBangCalculator < FancyCalculator
 
   def hypotenuse(first_number, second_number)
     Math.hypot(first_number, second_number)
@@ -83,4 +47,5 @@ class WhizBangCalculator
 end
 
 # Copy your driver code from the previous exercise and more below:
-
+test_simple = SimpleCalculator.add(3, 4)
+test_fancy = FancyCalculator.square_root(9)
